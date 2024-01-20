@@ -401,7 +401,7 @@ function passcodeSettingChange(set) {
 pcodeInput.oninput = function() {
     pcodeInput.value.length == settings.lock.passcode.length && (pcodeInput.value == settings.lock.passcode ? (document.getElementById("clockwork-lock").className = "clockwork-panel clockwork-panel-fadeout", document.getElementById("clockwork-content").style = "", setTimeout((function() {
         document.getElementById("clockwork-lock").style = "display: none;"
-    }), 300), sendNotification("Welcome to Fusion OS", "Fusion OS is currently running " + version)
+    }), 300), sendNotification("Welcome to Fusion OS", "Fusion OS is currently running " + version), sendNotification("Please update your bookmarklet or file", "beta15 adds useful changes to the bookmarklet - please update it if you haven't!")) : pcodeInput.value = "")
 };
 const notificationPanel = document.getElementById("clockwork-notification-panel");
 
