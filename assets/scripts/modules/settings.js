@@ -155,7 +155,7 @@ const settingsMenu = [
             type: "scriptbox",
             value: function (div) {
                 div.innerHTML = `<p>
-        Fusion OS now supports setting a passcode, which lets you lock down Fusion OS for anyone but you. Note that if you lose your passcode, there is <b>no way to recover,</b> so please write it down somewhere!
+        Clockwork now supports setting a passcode, which lets you lock down Clockwork for anyone but you. Note that if you lose your passcode, there is <b>no way to recover,</b> so please write it down somewhere!
         </p>`;
 
                 var btn = document.createElement("btn");
@@ -234,7 +234,7 @@ const settingsMenu = [
             type: "scriptbox",
             value: function (div) {
                 div.innerHTML = `<p>
-          This is a tool that allows you to import and export all the data stored in Fusion OS. Exporting will export your data in a .cws file, which can be imported easily. Importing will require a .cws file, and will force-restart Fusion OS. Also here is a Factory Reset option, which should only be used as a last resort (and will require your passcode.)
+          This is a tool that allows you to import and export all the data stored in Clockwork. Exporting will export your data in a .cws file, which can be imported easily. Importing will require a .cws file, and will force-restart Clockwork. Also here is a Factory Reset option, which should only be used as a last resort (and will require your passcode.)
           </p>`
                 var btn = document.createElement("btn");
                 btn.innerText = "Export"
@@ -287,7 +287,7 @@ const settingsMenu = [
                 btn.onclick = function () {
                     if (prompt(`WAIT A MINUTE!
         
-Factory resets will remove ALL your data from Fusion OS, including apps, themes and more. We highly suggest you export your data before you do this. To confirm you want to reset, type "factory reset" into the box below.`).toLowerCase() != "factory reset") {
+Factory resets will remove ALL your data from Clockwork, including apps, themes and more. We highly suggest you export your data before you do this. To confirm you want to reset, type "factory reset" into the box below.`).toLowerCase() != "factory reset") {
                         alert("Aborting!")
                         return;
                     }
@@ -298,7 +298,7 @@ Factory resets will remove ALL your data from Fusion OS, including apps, themes 
                         }
                     }
                     localStorage.clear();
-                    alert("Successfully reset Fusion OS. Reloading...");
+                    alert("Successfully reset Clockwork. Reloading...");
 
                     window.onbeforeunload = function (event) { }; // this makes it so it doesn't reload
                     document.location.reload();
@@ -309,7 +309,7 @@ Factory resets will remove ALL your data from Fusion OS, including apps, themes 
         ]
     },
     {
-        screenName: "About Fusion OS",
+        screenName: "About Clockwork",
         screenIcon: "/assets/images/ui/clockwork.png",
         screenContents: [{
             type: "scriptbox",

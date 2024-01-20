@@ -69,12 +69,12 @@ const searchables = [
         },
     },
     {
-        searchText: ["about fusion os"],
-        name: "About Fusion OS",
+        searchText: ["about clockwork", "version clockwork", "clockwork version"],
+        name: "About Clockwork",
         icon: "/assets/images/ui/clockwork.png",
         onclick: function () {
             openApp('sys_settings');
-            loadSettingsScreen("About Fusion OS");
+            loadSettingsScreen("About Clockwork");
         },
     },
 ]
