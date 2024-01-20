@@ -72,7 +72,7 @@ if (document.location.href.endsWith("?debug")) {
     }
     settingsMenu.push({
         screenName: "Debug Mode",
-        screenIcon: "/assets/images/ui/clockwork.png",
+        screenIcon: "assets/images/ui/clockwork.png",
         screenContents: [{
             type: "scriptbox",
             value: function (div) {
@@ -259,7 +259,7 @@ var defaultSettings = {
     // Proxy settings
     proxy: "none",
     proxyUrl: "",
-    wallpaper: "/assets/images/wallpapers/default.png",
+    wallpaper: "assets/images/wallpapers/default.png",
 }
 var settings = null;
 
@@ -316,9 +316,9 @@ if (localStorage.getItem("plugins") == null || localStorage.getItem("plugins") =
 if (localStorage.getItem("apps") == null || localStorage.getItem("apps") == "!!reset") {
     apps = [
         // CLOCKWORK APP STORE
-        "/assets/apps/store.json",
+        "assets/apps/store.json",
         // MUENSTER
-        "/assets/apps/muenster.json"
+        "assets/apps/muenster.json"
     ];
     localStorage.setItem("apps", JSON.stringify(apps));
 } else {
@@ -617,6 +617,8 @@ function openApp(app, url, encoded) {
     if (app == null || app == undefined) {
         throw "app ID is undefined";
     }
+    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+    audio.play();
     currentApp = app;
     for (const child of document.getElementById("appbar").children) {
         child.className = "";
@@ -667,9 +669,12 @@ function openApp(app, url, encoded) {
 }
 
 function closeApp(app) {
+
     if (app == null || app == undefined) {
         throw "app ID is undefined";
     }
+    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Back.mp3");
+    audio.play();
     for (const child of appPanel.children) {
         if (child.id == "apppanel:" + app) {
             child.className = "app";
@@ -687,6 +692,8 @@ function moveApp(app, type, plus) {
     if (app == null || app == undefined) {
         throw "app ID is undefined";
     }
+    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Move.mp3");
+    audio.play();
     var appIndex = apps.indexOf(app);
     if (appIndex != undefined) {
         if (type == "add") {
@@ -1021,10 +1028,10 @@ function sendNotification(title, content) {
     if (document.getElementById("clockwork-notification-items").innerText == "You're all caught up!") {
         document.getElementById("clockwork-notification-items").innerHTML = "";
     }
-    document.getElementById("clockwork-notification-items").innerHTML += `<div><b>${title} <img src="/assets/images/ui/x.png" 
+    document.getElementById("clockwork-notification-items").innerHTML += `<div><b>${title} <img src="assets/images/ui/x.png" 
   onclick="notifDestroy(this);"></b>\n${content}</div>`;
     if (!notifPanelOpen) {
-        document.getElementById("appsidebar:notifs").src = "/assets/images/ui/ringing-bell.png"
+        document.getElementById("appsidebar:notifs").src = "assets/images/ui/ringing-bell.png"
     }
 }
 
@@ -1035,7 +1042,7 @@ function openNotificationPanel() {
         setTimeout(function () {
             notificationPanel.className = "visible";
         }, 10)
-        document.getElementById("appsidebar:notifs").src = "/assets/images/ui/bell.png"
+        document.getElementById("appsidebar:notifs").src = "assets/images/ui/bell.png"
         notifPanelOpen = true;
     } else {
         notificationPanel.className = "invisible";

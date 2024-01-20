@@ -1,7 +1,7 @@
 const settingsMenu = [
     {
         screenName: "Manage Apps",
-        screenIcon: "/assets/images/ui/app-window.png",
+        screenIcon: "assets/images/ui/app-window.png",
         screenContents: [{
             type: "scriptbox",
             value: function (div) {
@@ -31,7 +31,7 @@ const settingsMenu = [
     },
     {
         screenName: "Manage Themes",
-        screenIcon: "/assets/images/ui/paintbrush-on-app-window.png",
+        screenIcon: "assets/images/ui/paintbrush-on-app-window.png",
         screenContents: [{
             type: "scriptbox",
             value: function (div) {
@@ -60,7 +60,7 @@ const settingsMenu = [
     },
     {
         screenName: "Personalization",
-        screenIcon: "/assets/images/ui/paintbrush.png",
+        screenIcon: "assets/images/ui/paintbrush.png",
         screenContents: [{
             label: "Clock type",
             type: "dropdown",
@@ -88,28 +88,28 @@ const settingsMenu = [
                 var defaultWallpapers = [
                     {
                         title: "Default",
-                        url: "/assets/images/wallpapers/default.png",
-                        preview: "/assets/images/wallpaper-previews/default.png"
+                        url: "assets/images/wallpapers/default.png",
+                        preview: "assets/images/wallpaper-previews/default.png"
                     },
                     {
                         title: "Mountains",
-                        url: "/assets/images/wallpapers/mountains.png",
-                        preview: "/assets/images/wallpaper-previews/mountains.png"
+                        url: "assets/images/wallpapers/mountains.png",
+                        preview: "assets/images/wallpaper-previews/mountains.png"
                     },
                     {
                         title: "Starry (for 100 stars)",
-                        url: "/assets/images/wallpapers/starry.png",
-                        preview: "/assets/images/wallpaper-previews/starry.png"
+                        url: "assets/images/wallpapers/starry.png",
+                        preview: "assets/images/wallpaper-previews/starry.png"
                     },
                     {
                         title: "Sunset by Quino Al",
-                        url: "/assets/images/wallpapers/sunset.png",
-                        preview: "/assets/images/wallpaper-previews/sunset.png"
+                        url: "assets/images/wallpapers/sunset.png",
+                        preview: "assets/images/wallpaper-previews/sunset.png"
                     },
                     {
                         title: "Grand Canyon by Bernard Spragg",
-                        url: "/assets/images/wallpapers/grand-canyon.jpg",
-                        preview: "/assets/images/wallpaper-previews/grand-canyon.png"
+                        url: "assets/images/wallpapers/grand-canyon.jpg",
+                        preview: "assets/images/wallpaper-previews/grand-canyon.png"
                     }
                 ]
                 for (let i = 0; i < defaultWallpapers.length;) {
@@ -126,7 +126,7 @@ const settingsMenu = [
                 }
                 var paper = document.createElement("DIV");
                 paper.innerText = "Custom wallpaper";
-                paper.style.backgroundImage = `url("/assets/images/wallpaper-previews/custom.png")`;
+                paper.style.backgroundImage = `url("assets/images/wallpaper-previews/custom.png")`;
                 paper.onclick = function (e) {
                     var url = prompt("Please enter the URL of the wallpaper file. SOME URLS MAY NOT WORK DUE TO THE BROWSER'S BUILT IN SECURITY SYSTEMS.")
                     if (!url) return;
@@ -149,7 +149,7 @@ const settingsMenu = [
     },
     {
         screenName: "Passcode Settings",
-        screenIcon: "/assets/images/ui/key.png",
+        screenIcon: "assets/images/ui/key.png",
         screenContents: [{
             label: "What is this?",
             type: "scriptbox",
@@ -207,7 +207,7 @@ const settingsMenu = [
     },
     {
         screenName: "Proxy Settings",
-        screenIcon: "/assets/images/ui/ultraviolet.png",
+        screenIcon: "assets/images/ui/ultraviolet.png",
         screenContents: [{
             label: "Proxy",
             type: "dropdown",
@@ -228,7 +228,7 @@ const settingsMenu = [
     },
     {
         screenName: "Import & Export",
-        screenIcon: "/assets/images/ui/import-export.png",
+        screenIcon: "assets/images/ui/import-export.png",
         screenContents: [{
             label: "What is this?",
             type: "scriptbox",
@@ -310,7 +310,7 @@ Factory resets will remove ALL your data from Fusion OS, including apps, themes 
     },
     {
         screenName: "About Fusion OS",
-        screenIcon: "/assets/images/ui/clockwork.png",
+        screenIcon: "assets/images/ui/clockwork.png",
         screenContents: [{
             type: "scriptbox",
             value: function (div) {

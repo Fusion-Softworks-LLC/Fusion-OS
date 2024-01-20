@@ -118,6 +118,8 @@ const settingsMenu = [
                     paper.style.backgroundImage = `url(${defaultWallpapers[i].preview})`;
                     paper.dataset.url = defaultWallpapers[i].url;
                     paper.onclick = function (e) {
+                        var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                        audio.play();
                         settings.wallpaper = e.target.dataset.url;
                         localStorage.setItem("settings", JSON.stringify(settings));
                     }
@@ -128,6 +130,8 @@ const settingsMenu = [
                 paper.innerText = "Custom wallpaper";
                 paper.style.backgroundImage = `url("/assets/images/wallpaper-previews/custom.png")`;
                 paper.onclick = function (e) {
+                    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                    audio.play();
                     var url = prompt("Please enter the URL of the wallpaper file. SOME URLS MAY NOT WORK DUE TO THE BROWSER'S BUILT IN SECURITY SYSTEMS.")
                     if (!url) return;
                     settings.wallpaper = url;
@@ -162,6 +166,8 @@ const settingsMenu = [
                 if (settings.lock.enabled) btn.innerText = "Change passcode"
                 else btn.innerText = "Create new passcode";
                 btn.onclick = function (e) {
+                    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                    audio.play();
                     if (settings.lock.enabled) {
                         if (prompt("Enter your old passcode.") != settings.lock.passcode) {
                             alert("Incorrect passcode!")
@@ -188,6 +194,8 @@ const settingsMenu = [
                 var btn = document.createElement("btn");
                 btn.innerText = "Remove passcode";
                 btn.onclick = function () {
+                    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                    audio.play();
                     if (settings.lock.enabled) {
                         if (prompt("Enter your passcode.") != settings.lock.passcode) {
                             alert("Incorrect passcode!")
@@ -239,6 +247,8 @@ const settingsMenu = [
                 var btn = document.createElement("btn");
                 btn.innerText = "Export"
                 btn.onclick = function () {
+                    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                    audio.play();
                     var myFile = new Blob([JSON.stringify({
                         settings: settings,
                         apps: apps,
@@ -256,6 +266,8 @@ const settingsMenu = [
                 var btn = document.createElement("btn");
                 btn.innerText = "Import"
                 btn.onclick = function () {
+                    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                    audio.play();
                     var input = document.createElement('input');
                     input.type = 'file';
                     input.accept = '.cws,.json'
@@ -285,6 +297,8 @@ const settingsMenu = [
                 var btn = document.createElement("btn");
                 btn.innerText = "Factory Reset"
                 btn.onclick = function () {
+                    var audio = new Audio("https://fusion-softworks-llc.github.io/assets/sfx/Select.mp3");
+                    audio.play();
                     if (prompt(`WAIT A MINUTE!
         
 Factory resets will remove ALL your data from Clockwork, including apps, themes and more. We highly suggest you export your data before you do this. To confirm you want to reset, type "factory reset" into the box below.`).toLowerCase() != "factory reset") {
