@@ -245,6 +245,8 @@ async function promptInstallApp(url, params) {
 }
 
 function openApp(app, url, encoded) {
+    //var audio = new Audio('/');
+//audio.play();
     if (null == app || null == app) throw "app ID is undefined";
     currentApp = app;
     for (const child of document.getElementById("appbar").children) child.className = "", child.id == "appbar:" + app && (child.className = "appbtnopen");
