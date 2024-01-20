@@ -309,7 +309,7 @@ Factory resets will remove ALL your data from Clockwork, including apps, themes 
         ]
     },
     {
-        screenName: "About Clockwork",
+        screenName: "About Fusion OS",
         screenIcon: "/assets/images/ui/clockwork.png",
         screenContents: [{
             type: "scriptbox",
@@ -318,13 +318,9 @@ Factory resets will remove ALL your data from Clockwork, including apps, themes 
           Running ${navigator.userAgent}<br>
           <br>
           <h2>Credits</h2>
-          lukasexists<br>
-          l413<br>
-          hellscaped<br>
-          stolas<br>
-          Quino Al<br>
-          Bernard Spragg<br>
-          and you for using our stuff`
+          lukasexists - Clockwork OS<br>
+          l413 - Developer<br>
+          XCader - C.E.O Of Fusion Softworks LLC / Developer</br>`
             }
         }]
     },
